@@ -61,5 +61,30 @@ namespace ExceptionsTesing
             
 
         }
+        [TestMethod]
+        public void given_empty_should_return_empty_exception()
+        {
+            try
+            {
+                //analyse
+                
+                string message = " ";
+                MoodAnalyser analyser = new MoodAnalyser(message);
+
+                //act
+                string actual = analyser.analyse_mood();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                //assert
+                Assert.AreEqual("Mood cannot be empty", ex.Message);
+
+            }
+
+
+        }
     }
 }
